@@ -39,6 +39,8 @@ module.exports = function createGenerator(pattern, options) {
     };
 
     var genericName = interpolateName(loaderContext, name, loaderOptions);
-    return genericName;
+    return genericName
+      .replace(new RegExp('[^a-zA-Z0-9\\-_\u00A0-\uFFFF]', 'g'), '-')
+      .replace(/^([^a-zA-Z_])/, '_$1');
   };
 };
