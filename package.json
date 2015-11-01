@@ -1,6 +1,6 @@
 {
   "name": "generic-names",
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "description": "Helper for building generic names, similar to webpack",
   "main": "index.js",
   "scripts": {
