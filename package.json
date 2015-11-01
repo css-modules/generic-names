@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sullenor/generic-names.git"
+    "url": "git+https://github.com/css-modules/generic-names.git"
   },
   "keywords": [
     "css-modules",
@@ -17,9 +17,9 @@
   "author": "Alexey Litvinov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sullenor/generic-names/issues"
+    "url": "https://github.com/css-modules/generic-names/issues"
   },
-  "homepage": "https://github.com/sullenor/generic-names#readme",
+  "homepage": "https://github.com/css-modules/generic-names#readme",
   "dependencies": {
     "loader-utils": "^0.2.11"
   },
