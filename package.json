@@ -4,7 +4,7 @@
   "description": "Helper for building generic names, similar to webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
   "homepage": "https://github.com/sullenor/generic-names#readme",
   "dependencies": {
     "loader-utils": "^0.2.11"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3"
   }
 }

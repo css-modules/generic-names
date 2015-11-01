@@ -7,7 +7,9 @@ Helper for building generic names, similar to webpack. Designed to be used with 
 
 ```javascript
 var genericNames = require('generic-names');
-var fn = genericNames('[name]__[local]___[hash:base64:5]', {
+var generate = genericNames('[name]__[local]___[hash:base64:5]', {
   context: process.cwd()
 });
+
+generate('foo', '/case/source.css'); // 'source__foo___3mRq8'
 ```
