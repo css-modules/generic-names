@@ -16,7 +16,7 @@ module.exports = function createGenerator(pattern, options) {
   var context = options && typeof options.context === 'string'
     ? options.context
     : '';
-  var hashPrefix = options && typeof options.hashPrefix
+  var hashPrefix = options && typeof options.hashPrefix === 'string'
     ? options.hashPrefix
     : '';
 
