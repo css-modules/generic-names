@@ -4,6 +4,13 @@ var interpolateName = require('loader-utils').interpolateName;
 var path = require('path');
 var util = require('util');
 
+function relativePathTo(root, path) {
+  if(path.indexOf(root) == 0) {
+    path = path.slice(root.length);
+  }
+  return path;
+}
+
 /**
  * @param  {string} pattern
  * @param  {object} options
@@ -30,10 +37,11 @@ module.exports = function createGenerator(pattern, options) {
     var loaderContext = {
       resourcePath: filepath
     };
+
     var loaderOptions = {
       content: util.format('%s%s+%s',
         hashPrefix,
-        path.relative(context, filepath),
+        relativePathTo(context, filepath),
         localName),
       context: context
     };
