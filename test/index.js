@@ -1,6 +1,6 @@
 'use strict';
 
-const genericNames = require('./index');
+const genericNames = require('../index');
 const test = require('tape');
 
 const pattern = '[name]__[local]___[hash:base64:5]';

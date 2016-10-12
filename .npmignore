@@ -2,5 +2,5 @@
 .gitignore
 .npmignore
 .travis.yml
-test.js
+test
 yarn.lock
