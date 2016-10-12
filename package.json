@@ -4,7 +4,7 @@
   "description": "Helper for building generic names, similar to webpack",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "tape test.js"
   },
   "repository": {
     "type": "git",
@@ -12,6 +12,7 @@
   },
   "keywords": [
     "css-modules",
+    "postcss-modules-scope",
     "webpack"
   ],
   "author": "Alexey Litvinov",
@@ -20,10 +21,10 @@
     "url": "https://github.com/css-modules/generic-names/issues"
   },
   "homepage": "https://github.com/css-modules/generic-names#readme",
-  "dependencies": {
-    "loader-utils": "^0.2.11"
-  },
   "devDependencies": {
-    "mocha": "^2.3.3"
+    "tape": "^4.6.2"
+  },
+  "dependencies": {
+    "loader-utils": "^0.2.16"
   }
 }

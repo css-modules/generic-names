@@ -1,3 +1,6 @@
-.git*
+.editorconfig
+.gitignore
+.npmignore
 .travis.yml
 test.js
+yarn.lock
