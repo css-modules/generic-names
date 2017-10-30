@@ -3,6 +3,7 @@
   "version": "1.0.2",
   "description": "Helper for building generic names, similar to webpack",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "tape test/*.js"
   },
