@@ -2,6 +2,7 @@
 
 const genericNames = require('../index');
 const test = require('tape');
+const path = require('path');
 
 // According to the CSS spec, identifiers cannot
 // start with a digit, two hyphens, or a hyphen
@@ -12,34 +13,34 @@ const test = require('tape');
 test('identity', t => {
   const generate = genericNames('[local]');
 
-  t.equal(generate('foo', '/test/case/source.css'), 'foo');
+  t.equal(generate('foo', path.join(__dirname, 'test/case/source.css')), 'foo');
   t.end();
 });
 
 test('leading digit', t => {
   const generate = genericNames('0[local]');
 
-  t.equal(generate('foo', '/test/case/source.css'), '_0foo');
+  t.equal(generate('foo', path.join(__dirname, 'test/case/source.css')), '_0foo');
   t.end();
 });
 
 test('leading digit in the token', t => {
   const generate = genericNames('[local]');
 
-  t.equal(generate('0foo', '/test/case/source.css'), '_0foo');
+  t.equal(generate('0foo', path.join(__dirname, 'test/case/source.css')), '_0foo');
   t.end();
 });
 
 test('leading two hyphens', t => {
   const generate = genericNames('--[local]');
 
-  t.equal(generate('foo', '/test/case/source.css'), '_--foo');
+  t.equal(generate('foo', path.join(__dirname, 'test/case/source.css')), '_--foo');
   t.end();
 });
 
 test('leading hyphen and digit', t => {
   const generate = genericNames('-0[local]');
 
-  t.equal(generate('foo', '/test/case/source.css'), '_-0foo');
+  t.equal(generate('foo', path.join(__dirname, 'test/case/source.css')), '_-0foo');
   t.end();
 });

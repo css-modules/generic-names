@@ -15,7 +15,7 @@ module.exports = function createGenerator(pattern, options) {
   options = options || {};
   var context = options && typeof options.context === 'string'
     ? options.context
-    : '';
+    : process.cwd();
   var hashPrefix = options && typeof options.hashPrefix === 'string'
     ? options.hashPrefix
     : '';
@@ -30,6 +30,7 @@ module.exports = function createGenerator(pattern, options) {
     var loaderContext = {
       resourcePath: filepath
     };
+
     var loaderOptions = {
       content: util.format('%s%s+%s',
         hashPrefix,
