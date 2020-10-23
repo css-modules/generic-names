@@ -11,7 +11,7 @@ test("use `cwd` if no context was provided", t => {
 
   t.equal(
     generate("foo", path.join(__dirname, "test/case/source.css")),
-    "source__foo___3D34a"
+    "source__foo___2e6d7"
   );
   t.end();
 });
@@ -23,7 +23,7 @@ test("generate distinct hash for the provided context", t => {
 
   t.equal(
     generate("foo", path.join(__dirname, "test/case/source.css")),
-    "source__foo___19xFw"
+    "source__foo___22-0m"
   );
   t.end();
 });
@@ -36,7 +36,7 @@ test("generate distinct hash for the provided hashPrefix", t => {
 
   t.equal(
     generate("foo", path.join(__dirname, "test/case/source.css")),
-    "source__foo___3T0Un"
+    "source__foo___1rt0M"
   );
   t.end();
 });
