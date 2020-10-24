@@ -34,7 +34,7 @@ module.exports = function createGenerator(pattern, options) {
       content:
         hashPrefix +
         path.relative(context, filepath).replace(/\\/g, "/") +
-        "+" +
+        "\x00" +
         localName,
       context: context
     };
