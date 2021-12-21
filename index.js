@@ -1,6 +1,6 @@
 "use strict";
 
-var interpolateName = require("loader-utils").interpolateName;
+var interpolateName = require("loader-utils/lib/interpolateName");
 var path = require("path");
 
 /**
@@ -27,7 +27,7 @@ module.exports = function createGenerator(pattern, options) {
   return function generate(localName, filepath) {
     var name = pattern.replace(/\[local\]/gi, localName);
     var loaderContext = {
-      resourcePath: filepath
+      resourcePath: filepath,
     };
 
     var loaderOptions = {
@@ -36,7 +36,7 @@ module.exports = function createGenerator(pattern, options) {
         path.relative(context, filepath).replace(/\\/g, "/") +
         "\x00" +
         localName,
-      context: context
+      context: context,
     };
 
     var genericName = interpolateName(loaderContext, name, loaderOptions);
