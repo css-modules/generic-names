@@ -40,3 +40,13 @@ test("generate distinct hash for the provided hashPrefix", t => {
   );
   t.end();
 });
+
+test("use group matches if regExp was provided", t => {
+  const generate = genericNames('[1]__[2]', { regExp: /([^/]*)\/([^/]*)$/ })
+
+  t.equal(
+    generate("foo", path.join(__dirname, "test/case/source.css")),
+    "case__source-css"
+  );
+  t.end()
+})

@@ -8,6 +8,7 @@ var path = require("path");
  * @param  {object} options
  * @param  {string} options.context
  * @param  {string} options.hashPrefix
+ * @param  {RegExp} options.regExp
  * @return {function}
  */
 module.exports = function createGenerator(pattern, options) {
@@ -37,6 +38,7 @@ module.exports = function createGenerator(pattern, options) {
         "\x00" +
         localName,
       context: context,
+      regExp: options.regExp,
     };
 
     var genericName = interpolateName(loaderContext, name, loaderOptions);
